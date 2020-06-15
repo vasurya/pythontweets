@@ -7,11 +7,11 @@ from wordcloud import WordCloud, STOPWORDS
 import matplotlib.pyplot as plt
 
 
-app_name = 'Jo_twitterverse'
-consumer_key='ohfNhcGiCEWjXv3bWJSwNreUh'
-consumer_secret='jLCWXaE3Vm5Z59EAS502aDxWHpo1xEym5aiJAT6jpKrzMWsRIW'
-access_token='946045253022228480-TldhcqpXYoxg2ZN5JSY1LHelBCi2Rf8'
-access_secret='VgN3J1sQbd0LcqI7P77iK6NodnRnqTdVZRzCW7EhKo2ZV'
+app_name = '<YOUR APP NAME>'
+consumer_key='<YOUR CONSUMER KEY'
+consumer_secret='<YOUR CONSUMER SECRET KEY>'
+access_token='<YOUR ACCESS TOKEN>'
+access_secret='<YOUR SECRET ACCESS TOKEN>'
 
 
 auth = tweepy.OAuthHandler(consumer_key,consumer_secret)
