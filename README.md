@@ -1,5 +1,5 @@
 # Twitter Sentiment Analysis using Python
-This project will help you see - What do people on Twitter think about any topic of your choice
+This project will help you see what people on Twitter think about any topic
 
 There are three steps in this project:
 
@@ -21,6 +21,8 @@ There are three steps in this project:
   Then display the results in a piechart.
   
   Make a word cloud of the data frame using the package wordcloud.
+  
+  As input, it takes the hastag that you want to search for. 
   
   The output shows two plots - one with the sentiment analyis piechart and the other with the wordcloud.
   
