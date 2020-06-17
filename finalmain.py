@@ -27,23 +27,17 @@ tt = [[tweet.text] for tweet in tweets]
 tweet_text = pd.DataFrame(data=tt, columns= ['text'])
 print(tweet_text.info)
 
-# tweet_text.to_csv(r'out.csv', index = True, header = True)
+
 
 
 pd.set_option('display.max_rows', None)
 pd.set_option('display.max_columns', None)
 pd.set_option('display.width', None)
 pd.set_option('display.max_colwidth', None)
-# data = pd.read_csv(r"C:\Users\Hp\Desktop\PYTHONTWEETS\PART2-ANALYZING DATABASE\trumptweets.csv")
+
 
 tweet_text = tweet_text.drop_duplicates()
-# data = data.drop("retweets", axis=1)
-# data = data.drop("mentions", axis=1)
-# data = data.drop("favorites", axis=1)
-# data = data.drop("hashtags", axis=1)
-# data = data.drop("geo", axis=1)
-# data = data.drop("date", axis=1 )
-# data = data.drop("link", axis=1)
+
 def preprocess(row):
     text = row['text']
     text = p.clean(text)
@@ -96,11 +90,10 @@ def Piechart(positive,negative,neutral):
     fig1, ax1 = plt.subplots()
     ax1.pie(sizes, labels = sizes, explode = explode, colors = colors, shadow=True, startangle = 140)
     ax1.axis('equal')
-    #plt.legend(labels, loc="best")
     plt.title('What do people think about # '+search)
     plt.legend(labels,loc=3)
     plt.axis('equal')
-    # plt.tight_layout()
+    
 
 
 
@@ -117,18 +110,12 @@ tweet_text['polarity'] = tweet_text['sentiment'].apply(lambda x:x[0])
 tweet_text['subjectivity'] = tweet_text['sentiment'].apply(lambda x:x[1])
 
 data_v = tweet_text.text.values
-# print(data.head())
-# print("Neutral ",neutral)
-# print("Positive ", positive)
-# print("Negative ", negative)
+
 
 positive_per = percentage(positive,count)
 negative_per = percentage(negative,count)
 neutral_per = percentage(neutral,count)
-print(positive_per)
-print(negative_per)
-print(neutral_per)
-print(count)
+
 
 avg_pol = total_p/count
 print("Overall")
