@@ -101,7 +101,7 @@ def Piechart(positive,negative,neutral):
 tweet_text['text'] = tweet_text.apply(preprocess,axis=1)
 tweet_text['text'] = tweet_text.apply(stopword,axis=1)
 tweet_text['text'] = tweet_text['text'].str.lower().str.replace('[^\w\s]',' ').str.replace('\s\s+', ' ')
-#Error in below Line
+
 tweet_text['sentiment'] = tweet_text['text'].apply(sentiment_anal)
 
 tweet_text['sentiment'][0][0]
